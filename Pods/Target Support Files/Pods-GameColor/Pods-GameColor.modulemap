@@ -1,0 +1,6 @@
+framework module Pods_GameColor {
+  umbrella header "Pods-GameColor-umbrella.h"
+
+  export *
+  module * { export * }
+}

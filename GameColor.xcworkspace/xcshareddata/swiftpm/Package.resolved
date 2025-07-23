@@ -1,0 +1,15 @@
+{
+  "originHash" : "102562721f5c812c000b9416a98159daca29e7587a1627e9e283bb6275dc2dea",
+  "pins" : [
+    {
+      "identity" : "colorthiefswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yamoridon/ColorThiefSwift.git",
+      "state" : {
+        "revision" : "ac04a95acca965f8030a01293c31621b2a812c39",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 3
+}
