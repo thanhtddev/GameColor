@@ -153,7 +153,7 @@ func quantizeToFourColors(image: UIImage, paletteColors: [UIColor]) -> UIImage? 
     
     context.draw(inputCGImage, in: CGRect(x: 0, y: 0, width: width, height: height))
     
-    let quantizationPalette = paletteColors // Sử dụng paletteColors được truyền vào
+    let quantizationPalette = paletteColors
     
     for y in 0..<height {
         for x in 0..<width {
@@ -162,7 +162,6 @@ func quantizeToFourColors(image: UIImage, paletteColors: [UIColor]) -> UIImage? 
             let g = pixelData[offset + 1]
             let b = pixelData[offset + 2]
             
-            // Tìm màu gần nhất trong bảng màu lượng tử hóa
             let closest = quantizationPalette.min(by: {
                 colorDistance(from: $0, to: r, g, b) < colorDistance(from: $1, to: r, g, b)
             })!

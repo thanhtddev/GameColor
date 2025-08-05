@@ -160,7 +160,6 @@ struct GameMatchView: View {
 
     private func handleColorSelection(selectedColor: UIColor) {
         if let index = missingColors.firstIndex(where: { $0.isSimilar(to: selectedColor) }) {
-            print("✅ Đúng màu")
             correctColorsFoundCount += 1
 
             let foundColor = missingColors.remove(at: index)
@@ -195,10 +194,3 @@ struct GameMatchView: View {
     }
 }
 
-#Preview {
-    if let uiImage = UIImage(named: "anh1") {
-        NavigationView {
-            GameMatchView(selectedImage: uiImage)
-        }
-    }
-}

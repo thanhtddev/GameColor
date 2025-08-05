@@ -110,8 +110,3 @@ struct ColorMatchView: View {
     }
 }
 
-#Preview {
-    let sample = UIImage(named: "asdf") ?? UIImage()
-    return ColorMatchView(selectedImages: [sample, sample, sample, sample, sample, sample])
-}
-

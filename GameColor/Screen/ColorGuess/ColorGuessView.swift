@@ -87,14 +87,16 @@ struct ColorGuessView: View {
                         NavigationLink(destination: GameGuessView(image: selectedImages[selectedIndex], onNext: {
                             if selectedIndex + 1 < selectedImages.count {
                                 selectedIndex += 1
-                                navigationToGame = false
+//                                navigationToGame = false
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     navigationToGame = true
                                 }
                             } else {
                                 navigationToGame = false
+                                dismiss()
                             }
-                        }), isActive: $navigationToGame){
+                        })
+                            .id(selectedIndex), isActive: $navigationToGame){
                             EmptyView()
                         }
                         Button(action: {
@@ -117,10 +119,5 @@ struct ColorGuessView: View {
         }
         .navigationBarHidden(true)
     }
-}
-
-#Preview {
-    let sample = UIImage(named: "asdf") ?? UIImage()
-    return ColorGuessView(selectedImages: [sample, sample, sample, sample, sample, sample])
 }
 

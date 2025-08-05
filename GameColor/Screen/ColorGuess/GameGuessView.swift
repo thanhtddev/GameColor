@@ -139,17 +139,3 @@ struct GameGuessView: View {
         options = result.shuffled()
     }
 }
-
-#Preview {
-    struct PreviewWrapper: View {
-        @State private var score = 0
-        let sample = UIImage(named: "asdf") ?? UIImage(systemName: "photo")!
-        
-        var body: some View {
-            GameGuessView(image: sample, onNext: { print("Next!") })
-                .environment(\.colorScheme, .light)
-        }
-    }
-    
-    return PreviewWrapper()
-}
